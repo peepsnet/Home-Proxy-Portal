@@ -2,9 +2,10 @@
 
 Password-protected gateway to the web servers on your LAN, through ONE port.
 
-1. Edit `config.json` targets (auto-created on first run).
-2. Set a password:   `python3 portal.py --set-password`
-3. Add TLS (`tls_cert` / `tls_key` in config.json) BEFORE forwarding the port
+1. `apt install python3-aiohttp`
+2. Edit `config.json` targets (auto-created on first run).
+3. Set a password:   `python3 portal.py --set-password`
+4. Add TLS (`tls_cert` / `tls_key` in config.json) BEFORE forwarding the port
    on your router. Or put Caddy in front and set `"behind_https_proxy": true`.
 
 ## Option A: systemd (Linux)
