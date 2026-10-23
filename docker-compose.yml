@@ -1,0 +1,9 @@
+services:
+  portal:
+    build: .
+    container_name: home-portal
+    restart: unless-stopped
+    ports:
+      - "8443:8443"          # forward this port on your router to this machine
+    volumes:
+      - ./data:/data         # config.json (and TLS certs, if used) live here
